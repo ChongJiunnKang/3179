@@ -18,15 +18,13 @@
         "key": "Country Name",
         "fields": ["2018"]
       }
-    },
-    {"calculate": "datum.2018 + 0.1", "as": "Active Cases"}
+    }
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
       "field": "2018",
-      "type": "quantitative",
-      "scale": {"type": "log"}
+      "type": "quantitative"
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
