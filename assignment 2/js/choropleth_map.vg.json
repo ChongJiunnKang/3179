@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/ChongJiunnKang/3179/master/assignment%202/data/energy.csv"
+          "url": "https://raw.githubusercontent.com/ChongJiunnKang/3179/master/assignment%202/data/CO2_emission.csv"
         },
         "key": "Country",
         "fields": ["Active"]
