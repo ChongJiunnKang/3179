@@ -15,22 +15,22 @@
         "data": {
           "url": "https://raw.githubusercontent.com/ChongJiunnKang/3179/master/assignment%202/data/CO2_emission.csv"
         },
-        "key": "Country",
-        "fields": ["Active"]
+        "key": "Country Name",
+        "fields": ["2018"]
       }
     },
-    {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
+    {"calculate": "datum.2018 + 0.1", "as": "Active Cases"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Active Cases",
+      "field": "2018",
       "type": "quantitative",
       "scale": {"type": "log"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Active", "type": "quantitative"}
+      {"field": "2018", "type": "quantitative"}
     ]
   }
 }
