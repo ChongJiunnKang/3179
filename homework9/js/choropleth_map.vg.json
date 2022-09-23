@@ -24,7 +24,12 @@
   "encoding": {
     "color": {
       "field": "2018",
-      "type": "quantitative"
+      "type": "quantitative",
+      "scale": {
+"type": "threshold",
+"domain": [0.5, 10, 50],
+"range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
