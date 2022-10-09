@@ -2,11 +2,22 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 600,
-  "title": "Energy usage in 2019",
+  "title": "Energy usage",
   "data": {
     "url": "https://raw.githubusercontent.com/ChongJiunnKang/3179/master/assignment%202/data/energy.csv"
   },
   "params": [
+    {
+      "name": "Year_selection",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 1990,
+        "max": 2019,
+        "step": 1,
+        "name": "Year:  "
+      }
+    },
     {
       "name": "Population_Above",
       "value": 0,
@@ -48,7 +59,7 @@
     {"filter": "datum.Energy_consumption > 0"},
     {"filter": "datum.Energy_production > 0"},
     {"filter": "datum.Population > Population_Above"},
-    {"filter": "datum.Year == 2019"},
+    {"filter": "datum.Year == Year_selection"},
     {"filter": "datum['Country'] != 'World'"},
     {
       "filter": "Energy_type_selection == null || datum.Energy_type == Energy_type_selection"
