@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ChongJiunnKang/3179/master/assignment%202/data/energy.csv"
+  },
+  "vconcat": [
+    {
+      "width": 480,
+      "height": 200,
+      "mark": "area",
+      "transform": [{"filter": "datum['Country'] == 'World'"},{"filter": "datum.Energy_type == 'all_energy_types'"}],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "timeUnit": "year",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"title": ""}
+        },
+        "y": {"field": "Energy_intensity_per_capita","type":"quantitative"}
+        }
+    }, 
+    {
+      "width": 480,
+      "height": 200,
+      "mark": "line",
+      "transform": [{"filter": "datum['Country'] == 'World'"},{"filter": "datum.Energy_type == 'all_energy_types'"}],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "timeUnit": "year",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"title": ""}
+        },
+        "y": {"field": "Population","type":"quantitative"}
+        }
+    },
+    {
+      "width": 480,
+      "height": 50,
+      "mark": "area",
+      "transform": [{"filter": "datum['Country'] == 'World'"},{"filter": "datum.Energy_type == 'all_energy_types'"}],
+      "params": [{"name": "brush", "select": {"type": "interval","encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {"field": "Year", "timeUnit": "year"},
+        "y": {
+          "field": "Energy_intensity_per_capita",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false}
+        }
+      }
+    } 
+  ]
+}
