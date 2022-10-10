@@ -5,8 +5,8 @@
   },
   "vconcat": [
     {
-      "width": 480,
-      "height": 200,
+      "width": 400,
+      "height": 150,
       "mark": "area",
       "transform": [{"filter": "datum['Country'] == 'World'"},{"filter": "datum.Energy_type == 'all_energy_types'"}],
       "encoding": {
@@ -20,8 +20,8 @@
         }
     }, 
     {
-      "width": 480,
-      "height": 200,
+      "width": 400,
+      "height": 150,
       "mark": "line",
       "transform": [{"filter": "datum['Country'] == 'World'"},{"filter": "datum.Energy_type == 'all_energy_types'"}],
       "encoding": {
@@ -35,8 +35,8 @@
         }
     },
     {
-      "width": 480,
-      "height": 50,
+      "width": 400,
+      "height": 25,
       "mark": "area",
       "transform": [{"filter": "datum['Country'] == 'World'"},{"filter": "datum.Energy_type == 'all_energy_types'"}],
       "params": [{"name": "brush", "select": {"type": "interval","encodings": ["x"]}}
