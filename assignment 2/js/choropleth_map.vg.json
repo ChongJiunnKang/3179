@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "CO2_Emission(2019)",
+  "title": "CO2_Emission(metric tons per capita)",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
