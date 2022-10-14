@@ -123,8 +123,8 @@
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Energy_type", "type": "nominal"},
-          {"field": "Energy consumption", "type": "quantitative", "format": ","},
-          {"field": "Energy production", "type": "quantitative", "format": ","}
+          {"field": "Energy consumption", "type": "quantitative", "format": ".3"},
+          {"field": "Energy production", "type": "quantitative", "format": ".3"}
         ]
       }
     },
@@ -150,8 +150,8 @@
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Energy_type", "type": "nominal"},
-          {"field": "Energy consumption", "type": "quantitative", "format": ","},
-          {"field": "Energy production", "type": "quantitative", "format": ","}
+          {"field": "Energy consumption", "type": "quantitative", "format": ".3"},
+          {"field": "Energy production", "type": "quantitative", "format": ".3"}
         ]
       }
     }
