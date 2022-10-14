@@ -16,7 +16,11 @@
           "scale": {"domain": {"param": "brush"}},
           "axis": {"title": ""}
         },
-        "y": {"field": "Energy_intensity_per_capita","title":"Energy intensity per capita","type":"quantitative"}
+        "y": {"field": "Energy_intensity_per_capita","title":"Energy intensity per capita","type":"quantitative"},
+        "tooltip": [
+        {"field": "Year","timeUnit": "year","title":"Year"},
+        {"field": "Energy_intensity_per_capita", "type": "quantitative","title":"Energy intensity per capita","format":".4s"}
+        ]
         }
     }, 
     {
@@ -31,7 +35,11 @@
           "scale": {"domain": {"param": "brush"}},
           "axis": {"title": ""}
         },
-        "y": {"field": "Population","type":"quantitative"}
+        "y": {"field": "Population","type":"quantitative"},
+        "tooltip": [
+        {"field": "Year","timeUnit": "year","title":"Year"},
+        {"field": "Population", "type": "quantitative","format":".3s"}
+        ]
         }
     },
     {
@@ -42,13 +50,17 @@
       "params": [{"name": "brush", "select": {"type": "interval","encodings": ["x"]}}
       ],
       "encoding": {
-        "x": {"field": "Year", "timeUnit": "year"},
+        "x": {"field": "Year", "timeUnit": "year","title":"Year"},
         "y": {
           "field": "Energy_intensity_per_capita",
           "title":"Energy intensity per capita",
           "type": "quantitative",
           "axis": {"tickCount": 3, "grid": false}
-        }
+        },
+        "tooltip": [
+        {"field": "Year","timeUnit": "year","title":"Year"},
+        {"field": "Energy_intensity_per_capita", "type": "quantitative","title":"Energy intensity per capita","format":".4s"}
+        ]
       }
     } 
   ]
