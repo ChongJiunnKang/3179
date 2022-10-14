@@ -9,7 +9,7 @@
   "params": [
     {
       "name": "Year_selection",
-      "value": 2010,
+      "value": 2016,
       "bind": {
         "input": "range",
         "min": 1990,
@@ -64,8 +64,8 @@
     {
       "filter": "Energy_type_selection == null || datum.Energy_type == Energy_type_selection"
     },
-    {"calculate": "abs(log(datum.Energy_consumption))", "as": "Energy consumption"},
-    {"calculate": "abs(log(datum.Energy_production))", "as": "Energy production"}
+    {"calculate": "datum.Energy_consumption", "as": "Energy consumption"},
+    {"calculate": "datum.Energy_production", "as": "Energy production"}
 
   ],
   "encoding": {
@@ -73,13 +73,13 @@
       "field": "Energy consumption",
       "type": "quantitative",
       "axis": {"tickCount": 5},
-      "scale": {"type": "threshold","domain": [0,14]}
+      "scale": {"type": "log"}
     },
     "y": {
       "field": "Energy production",
       "type": "quantitative",
       "axis": {"tickCount": 5},
-      "scale": {"type": "threshold","domain": [0,14]}
+      "scale": {"type": "log"}
     }
   },
   "layer": [
@@ -91,8 +91,8 @@
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [10000, 50000, 100000, 1500000,1400000],
-            "range": [50, 100, 300, 400, 600, 900]
+            "domain": [10000, 50000, 100000, 1000000],
+            "range": [50, 100, 300, 400,900]
           },
           "legend": {"format": ".1s"}
         },
@@ -112,14 +112,14 @@
             "range": [
               "#e41a1c",
               "#984ea3",
-              "#ff7f00",
-              "#a6cee3",
-              "#377eb8",
+              "orange",
+              "black",
+              "blue",
               "#a65628"
             ]
-          }
+          },"legend": {"labelExpr": "{'all_energy_types': 'all energy types', 'natural_gas': 'natural gas', 'coal': 'coal','nuclear': 'nuclear','petroleum_n_other_liquids': 'petroleum and other liquids', 'renewables_n_other': 'renewables and other'}[datum.label]"}
         },
-        "opacity": {"value": 0.6},
+        "opacity": {"value": 0.4},
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Energy_type", "type": "nominal"},
@@ -142,7 +142,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country'] == 'Australia' || datum['Country'] == 'United States' || datum['Country'] == 'Russia'|| datum['Country'] == 'China'",
+            "test": "datum['Country'] == 'Australia' || datum['Country'] == 'China'",
             "value": 1
           },
           "value": 0
