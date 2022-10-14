@@ -16,7 +16,7 @@
           "scale": {"domain": {"param": "brush"}},
           "axis": {"title": ""}
         },
-        "y": {"field": "Energy_intensity_per_capita","type":"quantitative"}
+        "y": {"field": "Energy_intensity_per_capita","title":"Energy intensity per capita","type":"quantitative"}
         }
     }, 
     {
@@ -45,6 +45,7 @@
         "x": {"field": "Year", "timeUnit": "year"},
         "y": {
           "field": "Energy_intensity_per_capita",
+          "title":"Energy intensity per capita",
           "type": "quantitative",
           "axis": {"tickCount": 3, "grid": false}
         }
