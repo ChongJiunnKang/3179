@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "CO2_Emission(metric tons per capita)",
+  "title": "CO2 Emission(metric tons per capita)",
   "width": 1000,
   "height": 500,
   "projection": {"type": "equalEarth"},
@@ -22,7 +22,7 @@
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
-    "color": {"field": "2019", "type": "quantitative","scale": {
+    "color": {"field": "2019", "type": "quantitative","title":"CO2 emission","scale": {
 "type": "threshold",
 "domain": [5, 10, 15],
 "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
